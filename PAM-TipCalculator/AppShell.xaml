@@ -6,10 +6,15 @@
     xmlns:local="clr-namespace:PAM_TipCalculator"
     Shell.FlyoutBehavior="Disabled"
     Title="PAM_TipCalculator">
-
-    <ShellContent
-        Title=""
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
-
+    <TabBar>
+        <ShellContent
+            Title="Inicio"
+            ContentTemplate="{DataTemplate local:MainPage}"
+            Route="MainPage" />
+        
+        <ShellContent
+            Title="Sobre"
+            ContentTemplate="{DataTemplate local:AboutPage}"
+            Route="Aboutpage" />
+    </TabBar>
 </Shell>

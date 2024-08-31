@@ -6,7 +6,9 @@
     <ScrollView>
         <VerticalStackLayout
             Padding="30,0"
-            Spacing="25">
+            Spacing="25"
+            Margin="0,40"
+            >
 
             <HorizontalStackLayout HorizontalOptions="Center" Spacing="25">
                 
@@ -62,7 +64,7 @@
             </HorizontalStackLayout>
 
             
-            <HorizontalStackLayout HorizontalOptions="Center" Spacing="10">
+            <HorizontalStackLayout HorizontalOptions="Center" Spacing="10" >
             <Button 
                 WidthRequest="180"
                 x:Name="SetLowTip" 
@@ -70,13 +72,13 @@
                 Clicked="SetLowTip_Clicked" />
             
             <Button 
-                 WidthRequest="180"
+                WidthRequest="180"
                 x:Name="SetHighTip" 
                 Text="20%" 
                 Clicked="SetHighTip_Clicked" />
             </HorizontalStackLayout>
             <HorizontalStackLayout HorizontalOptions="Center" Spacing="10">
-                <Button 
+                <Button
                 WidthRequest="180"
                 x:Name="RoundUpButton" 
                 Text="Arredondar para cima" 
