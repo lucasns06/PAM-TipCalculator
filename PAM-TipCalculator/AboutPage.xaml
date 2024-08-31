@@ -17,10 +17,12 @@
         <Button 
             x:Name="AboutButton"
             Text="Github"
-            WidthRequest="150" />
+            WidthRequest="150"
+            Clicked="AboutButton_Clicked"/>
         <Button 
             x:Name="SteamButton"
             Text="Steam"
-            WidthRequest="150" />
+            WidthRequest="150"
+            Clicked="SteamButton_Clicked"/>
     </VerticalStackLayout>
 </ContentPage>
