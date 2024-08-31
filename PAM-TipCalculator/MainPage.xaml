@@ -23,8 +23,13 @@
             Spacing="25"
             Margin="0,40" >
 
+
+            <Label
+                HorizontalOptions="Center"
+                Text="Tip Calculator"
+                FontAttributes="Bold"
+                FontSize="28" />
             <HorizontalStackLayout HorizontalOptions="Center" Spacing="25">
-                
                 <Label 
                 VerticalOptions="Center"
                 Text="Conta"/>
@@ -63,19 +68,16 @@
                     VerticalOptions="Center"
                     x:Name="TipPercentLabel"
                     Text="10%"/>
-                
-                <Slider
-                   VerticalOptions="Center"
-                   WidthRequest="240"
-                   x:Name="TipSlider"
-                   Maximum="70"
-                   Minimum="0"
-                   Value="20"
-                   ValueChanged="TipSlider_ValueChanged" />
-                
-            </HorizontalStackLayout>
 
-            
+            </HorizontalStackLayout>
+            <Slider
+                 VerticalOptions="Center"
+                 x:Name="TipSlider"
+                 Maximum="70"
+                 Minimum="0"
+                 Value="20"
+                 ValueChanged="TipSlider_ValueChanged" />
+
             <HorizontalStackLayout HorizontalOptions="Center" Spacing="10" >
                 <Button 
                     WidthRequest="180"
@@ -102,6 +104,9 @@
                     Text="Arredondar para baixo" 
                     Clicked="RoundDownButton_Clicked" />
             </HorizontalStackLayout>
+            <Border StrokeShape="RoundRectangle 100" HorizontalOptions="Center">
+                <Image Source="tip.png" WidthRequest="120"></Image>
+            </Border>
         </VerticalStackLayout>
     </ScrollView>
 
