@@ -7,55 +7,87 @@
         <VerticalStackLayout
             Padding="30,0"
             Spacing="25">
-            <Label 
+
+            <HorizontalStackLayout HorizontalOptions="Center" Spacing="25">
+                
+                <Label 
+                VerticalOptions="Center"
                 Text="Conta"/>
-            <Entry 
-                x:Name="AmountEntry"
-                Placeholder="Digite aqui o valor da conta"
-                TextChanged="AmountEntry_TextChanged"
-                Keyboard="Numeric"
-                />
-            <Label 
-                Text="Gorjeta: "
-                />
-            <Label x:Name="TipLabel"
-                   Text="0.00"/>
+                
+                <Entry 
+                    WidthRequest="200"
+                    x:Name="AmountEntry"
+                    Placeholder="Digite aqui o valor da conta"
+                    TextChanged="AmountEntry_TextChanged"
+                    Keyboard="Numeric"
+                    />
+            </HorizontalStackLayout>
             
-            <Label Text="Total:"/>
+            <HorizontalStackLayout Spacing="5">
+                <Label 
+                    Text="Gorjeta: "
+                    />
+                <Label x:Name="TipLabel"
+                       Text="0.00"/>
+                
+            </HorizontalStackLayout>
             
-            <Label x:Name="TotalLabel"
-                   Text="0.00"/>
+            <HorizontalStackLayout Spacing="5">
+                <Label Text="Total:"/>
             
-            <Label x:Name="TipPercentLabel"
-                   Text="10%"/>
+                <Label x:Name="TotalLabel"
+                       Text="0.00"/>
+            </HorizontalStackLayout>
             
-            <Slider
-                x:Name="TipSlider"
-                Maximum="70"
-                Minimum="0"
-                Value="20"
-                ValueChanged="TipSlider_ValueChanged" />
+            <HorizontalStackLayout Spacing="5">
+                
+                <Label 
+                    Text="Porcentagem:"
+                    VerticalOptions="Center" />
+
+                <Label
+                    VerticalOptions="Center"
+                    x:Name="TipPercentLabel"
+                      Text="10%"/>
+                
+                <Slider
+                   VerticalOptions="Center"
+                   WidthRequest="280"
+                   x:Name="TipSlider"
+                   Maximum="70"
+                   Minimum="0"
+                   Value="20"
+                   ValueChanged="TipSlider_ValueChanged" />
+                
+            </HorizontalStackLayout>
+
             
+            <HorizontalStackLayout HorizontalOptions="Center" Spacing="10">
             <Button 
+                WidthRequest="180"
                 x:Name="SetLowTip" 
                 Text="15%" 
                 Clicked="SetLowTip_Clicked" />
             
             <Button 
+                 WidthRequest="180"
                 x:Name="SetHighTip" 
                 Text="20%" 
                 Clicked="SetHighTip_Clicked" />
-            
-            <Button 
+            </HorizontalStackLayout>
+            <HorizontalStackLayout HorizontalOptions="Center" Spacing="10">
+                <Button 
+                WidthRequest="180"
                 x:Name="RoundUpButton" 
                 Text="Arredondar para cima" 
                 Clicked="RoundUpButton_Clicked" />
             
-            <Button 
+                <Button 
+                WidthRequest="180"
                 x:Name="RoundDownButton" 
                 Text="Arredondar para baixo" 
                 Clicked="RoundDownButton_Clicked" />
-
+            </HorizontalStackLayout>
         </VerticalStackLayout>
     </ScrollView>
 
