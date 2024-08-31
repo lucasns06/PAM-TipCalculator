@@ -1,28 +1,84 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="PAM_TipCalculator.AboutPage"
-             Title="AboutPage">
-    <VerticalStackLayout Spacing="10">
-        
-        <Image Source="perfil.jfif"
-               WidthRequest="80"
-               
-               ></Image>
+             x:Class="PAM_TipCalculator.AboutPage">
+
+    <ContentPage.Resources>
+        <Style TargetType="Button">
+            <Setter Property="BackgroundColor" Value="#EFEFFF" />
+            <Setter Property="TextColor" Value="black" />
+            <Setter Property="CornerRadius" Value="15" />
+        </Style>
+
+        <Style TargetType="Entry">
+            <Setter Property="PlaceholderColor" Value="White" />
+            <Setter Property="TextColor" Value="White" />
+        </Style>
+
+        <Style TargetType="Label">
+            <Setter Property="TextColor" Value="White" />
+            <Setter Property="FontAttributes" Value="Bold" />
+        </Style>
+    </ContentPage.Resources>
+
+    <VerticalStackLayout Background="#151515">
+        <Border Margin="0, 12, 0, 0" StrokeShape="RoundRectangle 100" HorizontalOptions="Center">
+            <Image Source="perfil.jfif" WidthRequest="120" >  </Image>
+        </Border>
+        <Label 
+             Margin="0, 8, 0, 0"
+             Text="Lucas Nascimento"
+             VerticalOptions="Center" 
+             HorizontalOptions="Center"
+             FontSize="Title"
+             />
+        <Label 
+            Text="Full stack developer"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            TextColor="Gray"
+         
+            />
+        <Label 
+            Margin="0, 18, 0, 0"
+            Text="Olá, meu nome é Lucas, e eu adoro programar!"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            
+            />
         
         <Label 
-            Text="Projeto feito por Lucas Nascimento"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+            Margin="0, 50, 0, 20"
+             Text="Meus projetos"
+             VerticalOptions="Center" 
+             HorizontalOptions="Center"
+             
+             />
+        
         <Button 
             x:Name="AboutButton"
             Text="Github"
             WidthRequest="150"
             Clicked="AboutButton_Clicked"/>
-        <Button 
-            x:Name="SteamButton"
-            Text="Steam"
-            WidthRequest="150"
-            Clicked="SteamButton_Clicked"/>
+        
+        <Label 
+            Margin="0, 180, 0, 0"
+            Text="Curso: Desenvolvimento de sistemas"
+            HorizontalOptions="Center"
+            TextColor="gray"
+              />
+
+        <Label 
+           Margin="0, 10, 0, 0"
+            Text="Professores: Guilherme e Victor"
+            HorizontalOptions="Center"
+            TextColor="gray"
+              />
+        <Label 
+            Margin="0, 10, 0, 0"
+            Text="ETEC Horácio Augusto da Silveira"
+            HorizontalOptions="Center"
+            TextColor="gray"
+              />
     </VerticalStackLayout>
 </ContentPage>

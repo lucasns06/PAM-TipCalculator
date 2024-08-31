@@ -1,14 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="PAM_TipCalculator.MainPage">
+             x:Class="PAM_TipCalculator.MainPage"
+             Title="Tip Calculator">
 
-    <ScrollView>
+    <ContentPage.Resources>
+        <Style TargetType="Button">
+            <Setter Property="BackgroundColor" Value="#EFEFFF" />
+            <Setter Property="TextColor" Value="black" />
+            <Setter Property="CornerRadius" Value="15" />
+        </Style>
+
+        <Style TargetType="Entry">
+            <Setter Property="PlaceholderColor" Value="White" />
+            <Setter Property="TextColor" Value="White" />
+        </Style>
+    </ContentPage.Resources>
+    
+    <ScrollView BackgroundColor="#151515">
         <VerticalStackLayout
-            Padding="30,0"
+            Padding="12,0"
             Spacing="25"
-            Margin="0,40"
-            >
+            Margin="0,40" >
 
             <HorizontalStackLayout HorizontalOptions="Center" Spacing="25">
                 
@@ -21,8 +34,8 @@
                     x:Name="AmountEntry"
                     Placeholder="Digite aqui o valor da conta"
                     TextChanged="AmountEntry_TextChanged"
-                    Keyboard="Numeric"
-                    />
+                    Keyboard="Numeric" />
+                
             </HorizontalStackLayout>
             
             <HorizontalStackLayout Spacing="5">
@@ -40,9 +53,8 @@
                 <Label x:Name="TotalLabel"
                        Text="0.00"/>
             </HorizontalStackLayout>
-            
+
             <HorizontalStackLayout Spacing="5">
-                
                 <Label 
                     Text="Porcentagem:"
                     VerticalOptions="Center" />
@@ -50,11 +62,11 @@
                 <Label
                     VerticalOptions="Center"
                     x:Name="TipPercentLabel"
-                      Text="10%"/>
+                    Text="10%"/>
                 
                 <Slider
                    VerticalOptions="Center"
-                   WidthRequest="280"
+                   WidthRequest="240"
                    x:Name="TipSlider"
                    Maximum="70"
                    Minimum="0"
@@ -65,30 +77,30 @@
 
             
             <HorizontalStackLayout HorizontalOptions="Center" Spacing="10" >
-            <Button 
-                WidthRequest="180"
-                x:Name="SetLowTip" 
-                Text="15%" 
-                Clicked="SetLowTip_Clicked" />
-            
-            <Button 
-                WidthRequest="180"
-                x:Name="SetHighTip" 
-                Text="20%" 
-                Clicked="SetHighTip_Clicked" />
+                <Button 
+                    WidthRequest="180"
+                    x:Name="SetLowTip" 
+                    Text="15%" 
+                    Clicked="SetLowTip_Clicked" />
+                
+                <Button 
+                    WidthRequest="180"
+                    x:Name="SetHighTip" 
+                    Text="20%" 
+                    Clicked="SetHighTip_Clicked" />
             </HorizontalStackLayout>
             <HorizontalStackLayout HorizontalOptions="Center" Spacing="10">
                 <Button
-                WidthRequest="180"
-                x:Name="RoundUpButton" 
-                Text="Arredondar para cima" 
-                Clicked="RoundUpButton_Clicked" />
+                    WidthRequest="180"
+                    x:Name="RoundUpButton" 
+                    Text="Arredondar para cima" 
+                    Clicked="RoundUpButton_Clicked" />
             
                 <Button 
-                WidthRequest="180"
-                x:Name="RoundDownButton" 
-                Text="Arredondar para baixo" 
-                Clicked="RoundDownButton_Clicked" />
+                    WidthRequest="180"
+                    x:Name="RoundDownButton" 
+                    Text="Arredondar para baixo" 
+                    Clicked="RoundDownButton_Clicked" />
             </HorizontalStackLayout>
         </VerticalStackLayout>
     </ScrollView>
