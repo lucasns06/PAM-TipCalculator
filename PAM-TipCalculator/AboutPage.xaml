@@ -4,7 +4,12 @@
              x:Class="PAM_TipCalculator.AboutPage"
              Title="AboutPage">
     <VerticalStackLayout Spacing="10">
-        <Image Source="perfil.jfif"></Image>
+        
+        <Image Source="perfil.jfif"
+               WidthRequest="80"
+               
+               ></Image>
+        
         <Label 
             Text="Projeto feito por Lucas Nascimento"
             VerticalOptions="Center" 
