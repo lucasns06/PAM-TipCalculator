@@ -104,8 +104,9 @@
                     Text="Arredondar para baixo" 
                     Clicked="RoundDownButton_Clicked" />
             </HorizontalStackLayout>
+            
             <Border StrokeShape="RoundRectangle 100" HorizontalOptions="Center">
-                <Image Source="tip.png" WidthRequest="120"></Image>
+                <Image Source="tip.jpg" WidthRequest="120"></Image>
             </Border>
         </VerticalStackLayout>
     </ScrollView>
