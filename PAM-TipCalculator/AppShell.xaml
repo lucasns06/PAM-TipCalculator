@@ -7,12 +7,19 @@
     Shell.FlyoutBehavior="Disabled"
     Shell.NavBarIsVisible="False"   
     Title="PAM_TipCalculator">
+    <Shell.Resources>
+        <ResourceDictionary>
+            <Style TargetType="TabbedPage">
+                <Setter Property="BackgroundColor" Value="Red" />
+            </Style>
+        </ResourceDictionary>
+    </Shell.Resources>
     <TabBar>
         <ShellContent
             Title="Inicio"
             ContentTemplate="{DataTemplate local:MainPage}"
             Route="MainPage" />
-        
+
         <ShellContent
             Title="Sobre"
             ContentTemplate="{DataTemplate local:AboutPage}"
