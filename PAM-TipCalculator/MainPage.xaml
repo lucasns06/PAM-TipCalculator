@@ -15,24 +15,32 @@
             <Setter Property="PlaceholderColor" Value="White" />
             <Setter Property="TextColor" Value="White" />
         </Style>
+        <Style TargetType="Label">
+            <Setter Property="TextColor" Value="White" />
+        </Style>
     </ContentPage.Resources>
     
-    <ScrollView BackgroundColor="#151515">
+    <ScrollView BackgroundColor="#151515" >
         <VerticalStackLayout
             Padding="12,0"
             Spacing="25"
             Margin="0,40" >
-
-
+            
             <Label
                 HorizontalOptions="Center"
                 Text="Tip Calculator"
                 FontAttributes="Bold"
                 FontSize="28" />
+
+            <Border StrokeShape="RoundRectangle 100" HorizontalOptions="Center">
+                <Image Source="tip.jpg" WidthRequest="120"></Image>
+            </Border>
+            
             <HorizontalStackLayout HorizontalOptions="Center" Spacing="25">
+                
                 <Label 
-                VerticalOptions="Center"
-                Text="Conta"/>
+                    VerticalOptions="Center"
+                    Text="Conta"/>
                 
                 <Entry 
                     WidthRequest="200"
@@ -47,8 +55,9 @@
                 <Label 
                     Text="Gorjeta: "
                     />
-                <Label x:Name="TipLabel"
-                       Text="0.00"/>
+                <Label
+                    x:Name="TipLabel"
+                    Text="0.00"/>
                 
             </HorizontalStackLayout>
             
@@ -56,7 +65,8 @@
                 <Label Text="Total:"/>
             
                 <Label x:Name="TotalLabel"
-                       Text="0.00"/>
+                       Text="0.00"
+                       />
             </HorizontalStackLayout>
 
             <HorizontalStackLayout Spacing="5">
@@ -104,10 +114,7 @@
                     Text="Arredondar para baixo" 
                     Clicked="RoundDownButton_Clicked" />
             </HorizontalStackLayout>
-            
-            <Border StrokeShape="RoundRectangle 100" HorizontalOptions="Center">
-                <Image Source="tip.jpg" WidthRequest="120"></Image>
-            </Border>
+
         </VerticalStackLayout>
     </ScrollView>
 
